@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Notepad</string>
+    <string name="app_name">notepad</string>
+    <string name="app_title">notepad</string>
+    <string name="complete">完成</string>
+    <string name="app_name_version">notepad v0.1.0</string>
+    <string name="app_author">Author：dif</string>
+    <string name="app_author_email">Email: dif@fish.cc</string>
+    <string name="into_app">开始使用</string>
 </resources>
