@@ -1,8 +1,7 @@
-package com.cfish.notepad;
+package com.cfish.notepad.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.Image;
 import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +14,11 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.cfish.notepad.util.DeleteAsyncTask;
+import com.cfish.notepad.entity.Note;
+import com.cfish.notepad.database.NoteDB;
+import com.cfish.notepad.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

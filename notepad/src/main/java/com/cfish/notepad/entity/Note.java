@@ -1,4 +1,4 @@
-package com.cfish.notepad;
+package com.cfish.notepad.entity;
 
 /**
  * Created by GKX100217 on 2016/5/19.

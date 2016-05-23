@@ -1,4 +1,4 @@
-package com.cfish.notepad;
+package com.cfish.notepad.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,7 +13,11 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.cfish.notepad.util.DeleteAsyncTask;
+import com.cfish.notepad.util.MyAdapter;
+import com.cfish.notepad.entity.Note;
+import com.cfish.notepad.database.NoteDB;
+import com.cfish.notepad.R;
 
 import java.util.ArrayList;
 import java.util.List;

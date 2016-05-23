@@ -1,7 +1,9 @@
-package com.cfish.notepad;
+package com.cfish.notepad.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.cfish.notepad.R;
 
 public class AboutActivity extends AppCompatActivity {
 

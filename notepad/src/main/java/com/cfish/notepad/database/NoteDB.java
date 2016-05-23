@@ -1,9 +1,11 @@
-package com.cfish.notepad;
+package com.cfish.notepad.database;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.cfish.notepad.entity.Note;
 
 import java.util.ArrayList;
 import java.util.List;

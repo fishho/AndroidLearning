@@ -1,4 +1,4 @@
-package com.cfish.notepad;
+package com.cfish.notepad.util;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.cfish.notepad.R;
+import com.cfish.notepad.entity.Note;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.cfish.notepad;
+package com.cfish.notepad.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
