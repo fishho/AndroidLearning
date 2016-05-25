@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <declare-styleable name="Ruler">
+        <attr name="ruler_bg_color" format="color|reference"/>
+        <attr name="ruler_line_color" format="color|reference"/>
+        <attr name="ruler_text_size" format="dimension"/>
+        <attr name="ruler_text_color" format="color|reference" />
+        <attr name="ruler_width_per_uint" format="dimension" />
+    </declare-styleable>
+</resources>
