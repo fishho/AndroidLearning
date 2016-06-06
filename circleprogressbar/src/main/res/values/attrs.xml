@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleProgressBar">
+        <attr name="circleColor" format="color|reference"></attr>
+        <attr name="sweepColor" format="color|reference"></attr>
+        <attr name="stroke" format="dimension|reference"></attr>
+        <attr name="startAngle" format="integer|reference"></attr>
+        <attr name="sweepStep" format="integer|reference"></attr>
+        <attr name="my_padding" format="dimension|reference"></attr>
+    </declare-styleable>
+</resources>
