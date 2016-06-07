@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 return view == object;
             }
         });
-        //mViewpager.setPageTransformer(true,new AlphaPageTransformer());
-        mViewpager.setPageTransformer(true,new RotatePageTransformer());
+        mViewpager.setPageTransformer(true,new AlphaPageTransformer());
+        //mViewpager.setPageTransformer(true,new RotatePageTransformer());
     }
 }

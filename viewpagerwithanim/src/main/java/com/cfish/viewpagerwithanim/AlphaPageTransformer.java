@@ -13,6 +13,9 @@ public class AlphaPageTransformer implements ViewPager.PageTransformer {
     public void transformPage(View page, float position) {
         if (position < -1) {
             page.setAlpha(mMinAlpha);
+            page.setScaleX(0.9f);
+            page.setScaleY(0.9f);
+            page.setRotation(30f);
         } else if (position <= 1) {
             if (position < 0 ) {
                 float factor = mMinAlpha + (1-mMinAlpha)*(1+position);
@@ -23,6 +26,8 @@ public class AlphaPageTransformer implements ViewPager.PageTransformer {
             }
         } else {
             page.setAlpha(mMinAlpha);
+            page.setScaleX(0.3f);
+            page.setScaleY(0.3f);//scale plus rotate
         }
     }
 }

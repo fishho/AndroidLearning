@@ -10,8 +10,8 @@
         android:id ="@+id/id_viewpager"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginRight="120dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="150dp"
         android:clipChildren="false"
         android:layout_gravity="center">
 
