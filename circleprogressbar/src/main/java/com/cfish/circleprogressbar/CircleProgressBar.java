@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 
@@ -17,11 +18,11 @@ public class CircleProgressBar extends View {
     /**
      * 默认宽度
      */
-    private static final int DEFAULTWIDTH = 100;
+    private static final int DEFAULTWIDTH = 400;
     /**
      * 默认高度
      */
-    private static final int DEFAULTHEIGHT = 100;
+    private static final int DEFAULTHEIGHT = 400;
     //外层圆圈的线条宽度
     private int stroke = 7;
     //外层圆圈的线条颜色
@@ -71,15 +72,29 @@ public class CircleProgressBar extends View {
 
         paint.setColor(circleColor);
         paint.setStrokeWidth(stroke);
+
         paint.setStyle(Paint.Style.STROKE);
-        canvas.drawCircle(getWidth()/2, getHeight()/2, (float) (getWidth()/2 - Math.ceil(stroke/2.0)), paint);
+        canvas.drawCircle(getWidth()/4, getHeight()/4, (float) (getWidth()/4 - Math.ceil(stroke/4.0)), paint);
+
+        paint.setStyle(Paint.Style.FILL);
+        canvas.drawCircle(getWidth()/4*3,getWidth()/4*3,(float) (getWidth()/4 - Math.ceil(stroke/4.0)), paint);
 
         paint.setColor(sweepColor);
         paint.setStyle(Paint.Style.FILL);
         //把扇形画在矩形中
-        rectF = new RectF(padding, padding, getWidth()- padding, getHeight() - padding);
+        rectF = new RectF(padding,padding, getWidth()/2- padding, getHeight()/2 - padding);
+        RectF rectFnew = new RectF(getWidth()/2+padding, getWidth()/2+padding, getWidth()- padding, getHeight() - padding);
         canvas.drawArc(rectF, startAngle, sweepAngle, true, paint);
-        sweepAngle += sweepStep;
+
+        //实现画圆弧的效果
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(20);
+        canvas.drawArc(rectFnew, startAngle, sweepAngle, false, paint);
+
+        Paint textPaint = new Paint();
+        textPaint.setTextSize(58);
+        canvas.drawText(sweepAngle+"",getWidth()/4*3-padding,getWidth()/4*3+padding,textPaint);
+        sweepAngle+= sweepStep;
         sweepAngle = sweepAngle > 360 ? 0: sweepAngle;
         invalidate();
     }
