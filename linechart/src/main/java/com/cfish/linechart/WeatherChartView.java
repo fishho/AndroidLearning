@@ -17,6 +17,7 @@ public class WeatherChartView extends View {
 
     //x轴集合
     private float mAxis[] = new float[6];
+    private String mTime[] = new String[6];
     //白天y轴集合
     private float mYAxisDay[] = new float[6];
     //夜间y轴集合
@@ -160,6 +161,7 @@ public class WeatherChartView extends View {
         int alpha1 = 102;
         int alpha2 = 255;
         for (int i = 0; i < LENGTH; i++) {
+            drawTime(canvas, mTextPaint, i,mTime);
             if (i < LENGTH -1) {
                 if (i == 0) {
                     mLinePaint.setAlpha(alpha1);
@@ -199,7 +201,7 @@ public class WeatherChartView extends View {
     }
 
 
-    private  void drawText(Canvas canvas, Paint textPaint, int i, int[] temp, float[] yAxis, int type) {
+    private void drawText(Canvas canvas, Paint textPaint, int i, int[] temp, float[] yAxis, int type) {
         switch (type) {
             case 0:
                 canvas.drawText(temp[i] + "°",mAxis[i],yAxis[i] - mRadius - mTextSpace, textPaint);
@@ -208,6 +210,12 @@ public class WeatherChartView extends View {
                 canvas.drawText(temp[i] + "°", mAxis[i], yAxis[i] + mTextSpace + mTextSize, textPaint);
                 break;
         }
+    }
+
+    private void drawTime(Canvas canvas, Paint timePaint,int i, String[] time) {
+        timePaint.setTextSize(18);
+
+        canvas.drawText(time[i], mAxis[i], mHeight-15, timePaint);
     }
 
 
@@ -232,5 +240,9 @@ public class WeatherChartView extends View {
 
     public void setTempNight(int[] tempNight) {
         mTempNight = tempNight;
+    }
+
+    public void setTime(String[] time) {
+        mTime = time;
     }
 }

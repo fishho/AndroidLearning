@@ -10,23 +10,26 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.cfish.linechart.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-    <!--<com.cfish.linechart.LineChart-->
-        <!--android:id="@+id/lineChart"-->
-        <!--android:layout_width="400dp"-->
-        <!--android:layout_height="400dp" />-->
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Hello World!" />-->
+    <!--&lt;!&ndash;<com.cfish.linechart.LineChart&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/lineChart"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="400dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="400dp" />&ndash;&gt;-->
 
-    <com.cfish.linechart.WeatherChartView
-        android:id="@+id/chart_View"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@android:color/holo_green_light"
-        app:dayColor="@color/colorAccent"
-        app:nightColor="@color/colorPrimaryDark"
-        app:textColor="@android:color/white"
-        app:textSize="14sp"
-        />
+    <!--<com.cfish.linechart.WeatherChartView-->
+        <!--android:id="@+id/chart_View"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:background="@android:color/holo_green_light"-->
+        <!--app:dayColor="@color/colorAccent"-->
+        <!--app:nightColor="@color/colorPrimaryDark"-->
+        <!--app:textColor="@android:color/white"-->
+        <!--app:textSize="14sp" />-->
+    <com.cfish.linechart.SimpleLineChart
+        android:id="@+id/calendar_view"
+        android:layout_width="400dp"
+        android:layout_height="200dp" />
 </RelativeLayout>

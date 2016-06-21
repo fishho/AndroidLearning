@@ -6,4 +6,13 @@
         <attr name="nightColor" format="color" />
         <attr name="textSize" format="dimension" />
     </declare-styleable>
+    <declare-styleable name="SimpleLineChart">
+        <attr name="xylinecolor" format="color" />
+        <attr name="xylinewidth" format="color" />
+        <attr name="xytextcolor" format="color" />
+        <attr name="xytextsize" format="dimension" />
+        <attr name="linecolor" format="color" />
+        <attr name="interval" format="dimension" />
+        <attr name="bgcolor" format="color" />
+    </declare-styleable>
 </resources>
