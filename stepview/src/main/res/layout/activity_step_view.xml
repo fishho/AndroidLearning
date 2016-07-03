@@ -15,11 +15,22 @@
         android:id="@+id/step_view0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerHorizontal="true" />
     <!--<com.cfish.stepview.VerticalStepView-->
         <!--android:id="@+id/step_view0"-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="match_parent"-->
         <!--android:text="vertical stepview"-->
         <!--/>-->
+    <com.cfish.stepview.CheckView
+        android:id="@+id/check_view"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_below="@id/step_view0">
+    </com.cfish.stepview.CheckView>
+    <com.cfish.stepview.ForTryView
+        android:layout_width="600dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/step_view0"/>
 </RelativeLayout>
